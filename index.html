@@ -18,10 +18,8 @@
 
         <!-- header -->
         <!-- title -->
-        <div id="page-header">
-            <div class="jumbotron">
-                <h1>New York Times Search</h1>
-            </div>
+        <div id="page-header" class="jumbotron">
+            <i class="far fa-newspaper"></i><h1> New York Times Search</h1>
         </div>
         <br>
         <div id="search-parameters">
@@ -31,28 +29,37 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="search-string">Search Term: </label>
-                        <input id="search-string" class="form-control" type="text" placeholder="">
-                        <br>
+                        <div class="form-element">
+                            <label for="search-string">Search Term: </label>
+                            <input id="search-string" class="form-control" type="text" placeholder="">
+                        </div>
 
-                        <label for="article-num"> Number of articles to retrieve: </label>
-                        <select id="article-num" class="custom-select">
-                            <option value="1">1</option>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                        </select>
-                        <br>
+                        <div class="form-element">
+                            <label for="article-num"> Number of articles to retrieve: </label>
+                            <select id="article-num" class="custom-select">
+                                <option value="1">1</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
 
-                        <label for="start-date"> Start: </label>
-                        <input id="start-date" class="form-control" type="text" placeholder="(Year)">
-                        <br>
+                        <div class="form-element">
+                            <label for="start-date"> Start: </label>
+                            <input id="start-date" class="form-control" type="text" placeholder="YYYY/MM/DD">
 
-                        <label for="end-date"> End: </label>
-                        <input id="end-date" class="form-control" type="text" placeholder="(Year)">
+                        </div>
 
-                        <button id="search" class = "btn btn-primary"> Search </button>
-                        <button id="reset" class = "btn btn-primary"> Reset </button>
+                        <div class="form-element">
+                            <label for="end-date"> End: </label>
+                            <input id="end-date" class="form-control" type="text" placeholder="YYYY/MM/DD">
 
+                        </div>
+
+                        <div class="form-element" id="button-section">
+                            <button id="search" class="btn btn-outline-secondary"> Search </button>
+                            <button id="reset" class="btn btn-outline-secondary"> Reset </button>
+
+                        </div>
                     </div>
                 </div>
 
@@ -68,7 +75,7 @@
                     <b>Top Articles</b>
                 </div>
                 <div class="card-body">
-                    <div id="topArticles">
+                    <div id="top-articles">
                     </div>
                 </div>
 
@@ -79,7 +86,7 @@
 
     </div>
 
-<script src="assets/javascript/nytimes.js"></script>
+    <script src="assets/javascript/nytimes.js"></script>
 </body>
 
 </html>

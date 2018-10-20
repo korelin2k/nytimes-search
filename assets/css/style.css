@@ -1,0 +1,27 @@
+body {
+    margin-top: 15px;
+}
+h1 {
+    color:white;
+    display: inline;
+}
+
+#page-header {
+    text-align: center;
+    background: rgb(11, 11, 102);
+}
+
+.form-element{
+    padding:5px;
+    margin: 5px;
+}
+
+#button-section{
+    padding-top: 15px;
+}
+
+.fa-newspaper{
+    color: white;
+    display: inline;
+    height: 55px;
+}
