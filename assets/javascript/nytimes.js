@@ -4,6 +4,7 @@ let startDate = $(`start-date`);
 let endDate = $(`#end-date`);
 let articleNum = $(`#article-num`);
 let searchBtn = $(`#search`);
+let topArticlesDiv = $(`#top-articles`);
 
 let key = `8bf813cc29984257874f07be0ea2327f`;
 
@@ -25,16 +26,31 @@ let article = {
             method: 'GET',
         }).done(function (result) {
             console.log(result);
-            makeArticle(result);
+            makeArticle(result.docs);
         }).fail(function (err) {
             throw err;
         });
     },
 
     makeArticle: function(articles){
-        articles.map(function(currentArticle){
-            console.log(currentArticle);
-        })
+        console.log(articles);
+        // articles.map(function(currentArticle){
+        //     console.log(currentArticle);
+
+        // });
+
+        for(let i = 1 ; i <= articleNum.val(); i++ ){
+            console.log(articles[i]);
+            console.log(articles[i].headline.main);
+            let headline = articles[i].headline.main;
+            console.log(articles[i].web_url);
+            let articleUrl = articles[i].web_url;
+            let newDiv = $(`<div>`);
+            newDiv.html(`
+            <span>${i}</span><span>${headline}</span><span>${articleUrl}</span>
+            `);
+            topArticlesDiv.append(newDiv);
+        }
     }
 }
 
